@@ -23,7 +23,7 @@ See additional libraries, guides, and examples at:
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Leap Motion JavaScript Sample</title>
-<script src="http://js.leapmotion.com/leap-0.6.3.min.js"></script>
+<script src="leap-0.6.3.min.js"></script>
 <script>
 // Store frame for motion functions
 var previousFrame = null;
@@ -90,6 +90,7 @@ Leap.loop(controllerOptions, function(frame) {
       handString += "Hand ID: " + hand.id + "<br />";
       handString += "Type: " + hand.type + " hand" + "<br />";
       handString += "Direction: " + vectorToString(hand.direction, 2) + "<br />";
+      console.log(hand.palmPosition[0]);
       handString += "Palm position: " + vectorToString(hand.palmPosition) + " mm<br />";
       handString += "Grab strength: " + hand.grabStrength + "<br />";
       handString += "Pinch strength: " + hand.pinchStrength + "<br />";
